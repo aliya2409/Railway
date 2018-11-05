@@ -4,8 +4,8 @@ import com.epam.railway.entity.RailTransport;
 
 public class CargoWagon extends RailTransport {
     private boolean forCargoTransportation = true;
-    private static final double DEFAULT_WEIGHT = 25.5;
-    private static final double DEFAULT_PAYLOAD = 81;
+    private static double DEFAULT_WEIGHT = 25.5;
+    private static double DEFAULT_PAYLOAD = 81;
 
     public CargoWagon(double weight, double payload) {
         super(weight, payload);
@@ -30,6 +30,14 @@ public class CargoWagon extends RailTransport {
 
     public static double getDefaultPayload() {
         return DEFAULT_PAYLOAD;
+    }
+
+    public static void setDefaultWeight(double defaultWeight) {
+        DEFAULT_WEIGHT = defaultWeight;
+    }
+
+    public static void setDefaultPayload(double defaultPayload) {
+        DEFAULT_PAYLOAD = defaultPayload;
     }
 }
 

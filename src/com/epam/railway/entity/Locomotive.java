@@ -2,6 +2,7 @@ package com.epam.railway.entity;
 
 public class Locomotive extends RailTransport {
     private double power;
+    private static double DEFAULT_POWER = 1000;
 
     public Locomotive(double weight, double payload, double power) {
         super(weight, payload);
@@ -9,6 +10,7 @@ public class Locomotive extends RailTransport {
     }
 
     public Locomotive() {
+        power = DEFAULT_POWER;
     }
 
     public double getPower() {
@@ -17,5 +19,13 @@ public class Locomotive extends RailTransport {
 
     public void setPower(double power) {
         this.power = power;
+    }
+
+    public static double getDefaultPower() {
+        return DEFAULT_POWER;
+    }
+
+    public static void setDefaultPower(double defaultPower) {
+        DEFAULT_POWER = defaultPower;
     }
 }
