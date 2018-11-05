@@ -4,10 +4,19 @@ import com.epam.railway.entity.RailTransport;
 
 public class PassengerWagon extends RailTransport {
     private int seats;
+    private static final double DEFAULT_WEIGHT = 27.5;
+    private static final double DEFAULT_PAYLOAD = 63;
+    private static final int DEFAULT_SEATS = 36;
 
     public PassengerWagon(double weight, double payload, int seats) {
         super(weight, payload);
         this.seats = seats;
+    }
+
+    public PassengerWagon() {
+        weight = DEFAULT_WEIGHT;
+        payload = DEFAULT_PAYLOAD;
+        seats = DEFAULT_SEATS;
     }
 
     public int getSeats() {
@@ -16,5 +25,17 @@ public class PassengerWagon extends RailTransport {
 
     public void setSeats(int seats) {
         this.seats = seats;
+    }
+
+    public static double getDefaultWeight() {
+        return DEFAULT_WEIGHT;
+    }
+
+    public static double getDefaultPayload() {
+        return DEFAULT_PAYLOAD;
+    }
+
+    public static int getDefaultSeats() {
+        return DEFAULT_SEATS;
     }
 }

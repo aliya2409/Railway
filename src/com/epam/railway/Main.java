@@ -27,10 +27,10 @@ public class Main {
         List<RailTransport> passengerPostTrain = new ArrayList<>();
         Locomotive locomotive2 = new Locomotive(48.5,34,1000);
         passengerPostTrain.add(locomotive2);
-        PassengerWagon passengerWagon2 = new PassengerWagon(28.3,40.2,36);
+        PassengerWagon passengerWagon2 = new PassengerWagon();
         passengerWagon.setSeats(50);
-        passengerPostTrain.add(passengerWagon);
-        PostWagon postWagon = new PostWagon(31.8,54.3);
+        passengerPostTrain.add(passengerWagon2);
+        PostWagon postWagon = new PostWagon();
         passengerPostTrain.add(postWagon);
         composeTrain(passengerPostTrain);
     }

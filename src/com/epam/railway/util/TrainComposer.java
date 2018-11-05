@@ -22,7 +22,7 @@ public class TrainComposer {
         if (trainCandidate.get(0) instanceof Locomotive) {
             double weightBalance = ((Locomotive) trainCandidate.get(0)).getPower();
             for (int i = 0; i < trainCandidate.size(); i++) {
-                weightBalance = weightBalance - trainCandidate.get(i).getTotalWeight();
+                weightBalance -= trainCandidate.get(i).getTotalWeight();
             }
             return weightBalance > 0;
         } else {
