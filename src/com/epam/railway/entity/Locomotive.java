@@ -2,7 +2,7 @@ package com.epam.railway.entity;
 
 public class Locomotive extends RailTransport {
     private double power;
-    private static double DEFAULT_POWER = 1000;
+    private static double DEFAULT_POWER = 2000;
 
     public Locomotive(double weight, double payload, double power) {
         super(weight, payload);
